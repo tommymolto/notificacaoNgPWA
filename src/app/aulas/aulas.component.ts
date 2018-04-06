@@ -37,4 +37,9 @@ export class AulasComponent implements OnInit {
 
     }
 
+  enviarNotificacao(){
+    console.log("Enviando notificacoes ...");
+
+    this.api.enviaMensagem().subscribe();
+  }
 }

@@ -38,7 +38,7 @@ app.route('/api/aulas')
 app.route('/api/notificacoes')
     .post(addPushSubscriber);
 
-app.route('/api/newsletter')
+app.route('/api/envianotificacao')
     .post(sendNewsletter);
 
 
