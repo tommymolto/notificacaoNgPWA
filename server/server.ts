@@ -7,6 +7,7 @@ import {sendNewsletter} from "./send-newsletter.route";
 const bodyParser = require('body-parser');
 
 const webpush = require('web-push');
+var cors = require('cors');
 
 const vapidKeys = {
     "publicKey":"BK_ccvC7iqF4PMti1PHruOLxqWta0OX4LZjCFG_QMq2_3jk3Vj_AH3VmZWMYjyELdp2n8RXj92BgqMTixd5ToxM",
@@ -25,7 +26,7 @@ webpush.setVapidDetails(
 
 
 const app: Application = express();
-
+app.use(cors());
 
 app.use(bodyParser.json());
 
@@ -34,7 +35,7 @@ app.use(bodyParser.json());
 app.route('/api/aulas')
     .get(readAllLessons); 
 
-app.route('/api/notifications')
+app.route('/api/notificacoes')
     .post(addPushSubscriber);
 
 app.route('/api/newsletter')

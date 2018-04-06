@@ -20,6 +20,7 @@ export class AulasComponent implements OnInit {
   ngOnInit() {
   }
   inscricaoNotificacao() {
+    console.log('inscricaoNotificacao');
         this.swPush.requestSubscription({
             serverPublicKey: this.VAPID_PUBLIC_KEY
         })

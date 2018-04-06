@@ -5,11 +5,11 @@ import { HttpClient } from '@angular/common/http';
 export class NotificacaoService {
 
   constructor( private http: HttpClient) { }
-  adicionaCliente(sub){
-      return this.http.post('/api/notificacoes', sub)
+  adicionaCliente(sub: any){
+      return this.http.post('https://pwa-final-fronendinfnet.c9users.io:8081/api/notificacoes', sub)
   }
   enviaMensagem(){
-      return this.http.post('/api/notificacao', null);
+      return this.http.post('https://pwa-final-fronendinfnet.c9users.io:8081/api/newsletter', null);
   }
 
 }
