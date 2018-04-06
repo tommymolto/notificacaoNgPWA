@@ -5,7 +5,7 @@ Este é o ultimo exemplo da materia de FrontEnd / Pos de desenvolvimento hibrido
 Caso queira criar o seu projeto e comparar com esta versão, utilize em sua criação:
 ng new NOME --routing true --service-worker true
 
-## Development server
+## Development servercd ng
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
